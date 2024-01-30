@@ -1,0 +1,29 @@
+.card-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+}
+
+.card{
+    border: 1px solid #ffffff;
+    color: #eee;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card h3{
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.card p {
+    padding: 10px 0;
+}
+
+.visit-btn a{
+    list-style: none;
+    color:#eee;
+    
+}

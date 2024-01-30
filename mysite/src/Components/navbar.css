@@ -1,0 +1,42 @@
+.header{
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+}
+
+.nav-menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.nav-menu li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.nav-menu li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f0a910;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.nav-menu li:hover::after{
+    width: 100%;
+}

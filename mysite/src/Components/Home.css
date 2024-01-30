@@ -3,65 +3,77 @@
     padding: 0;
     font-family: sans-serif;
     font-style: bold;
-}
-.banner{
-    width:100%;
-    height: 100vh;
-    background-image: url("R.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.navbar{
-    width:85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between
-}
-.logo{
-    width: 120px;
-    cursor: pointer;
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #f0a910;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{
-    width: 100%;
+    box-sizing: border-box;
 }
 
-.content {
-    width: 100%;
-    color:#555252;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+body{
+    background: #0000;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.container{
+    padding: 10px 10%;
+
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    color: white;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: goldenrod;
+}
+
+.about{
+    padding: 80px 0;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+    padding: 80px 0;
+    color: var(--navbar-text);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
 }
-.content h1 {
-    font-size: 70px;
-    margin-top:  80px;
+
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
 }
-.content p{
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
+
+
+.feature {
+    background-color: var(--navbar);
+    color: var(--navbar-text);
+    outline: 2px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 300px;
+    display: inline-block;
+}
+
+.feature ul li {
+    list-style: none;
 }
