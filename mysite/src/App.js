@@ -1,28 +1,37 @@
-import './App.css';
-import React, {useState} from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import './App.css'; // Ensure this doesn't override Chakra UI styles
+import React from 'react';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { ChakraProvider, Box} from '@chakra-ui/react';
+// import { useInView } from 'react-intersection-observer';
 
-import Home from './Components/Home';
-import About from './Components/About';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
+import theme from './Components/theme';
+import Navbar from './Components/navbar'
+import Page from "./Components/Page"
 
 function App() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+  const hiddenElements = document.querySelectorAll('.hidden')
+  hiddenElements.forEach((el) => observer.observe(el));
+  
   return (
-    <BrowserRouter basename={"/"}>
-      <Routes>
-        <Route path='/' element = {<Home/>}/>
-        <Route path='/about' element = {<About/>}/>
-        <Route path='/projects' element = {<Projects/>}/>
-        <Route path='/contact' element = {<Contact/>}/>
-        <Route path='*' element = {<NoPage/>}/>
-      </Routes>
-    </BrowserRouter>
+    <div className='App'>
+      <Navbar />
+      <Page />
+    </div>
   );
 }
 
 export default App;
 
-function NoPage() {
-  return <h2>No page at requested path</h2>;
-}
+// function NoPage() {
+//   return <h2>No page at requested path</h2>;
+// }

@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #0000;
-  background-color: rgb(20, 20, 20);
+  background: #021526;
+  background-color: #021526;
   color: white;
 }
 
@@ -27,5 +27,9 @@ button{
   font-size: 12px;
   margin: 4px;
   cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
