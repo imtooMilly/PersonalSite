@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #021526; 
+    background-color: #222831; 
     color: #E2E2B6; 
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    background-color: #021526;
+    background-color: #222831;
     color: #E2E2B6;
 }
 
@@ -120,11 +120,6 @@ main {
     padding: 10px 0;
 }
 
-#visit-btn {
-    list-style: none;
-    color: #eee;
-    background: #6EACDA;
-}
 
 /* Animations */
 .hidden{
